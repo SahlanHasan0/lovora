@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff6fa">
+  <meta name="description" content="Lovora creates personalized birthday websites with dreamy themes, photos, animations, heartfelt messages and optional custom domains.">
+  <meta property="og:title" content="Lovora — Little websites, big feelings">
+  <meta property="og:description" content="A personal birthday surprise, made just for your favorite person.">
+  <title>Lovora — Little Websites, Big Feelings</title>
+  <style>
+    :root{--bg:#fff9fc;--paper:#fff;--ink:#2a1830;--muted:#77677b;--pink:#fa72ad;--pink2:#ffd8e9;--berry:#8b315d;--plum:#49253e;--lilac:#c4b4ff;--line:#f1dfeb;--shadow:0 22px 65px rgba(102,39,79,.10);--radius:28px;--max:1180px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:var(--bg);color:var(--ink);font-family:ui-rounded,"Avenir Next","Segoe UI",system-ui,-apple-system,sans-serif;overflow-x:hidden}img{max-width:100%;display:block}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}button,a{-webkit-tap-highlight-color:transparent}::selection{background:#ffd2e5;color:#47243b}
+    .ambient{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;background:radial-gradient(circle at 6% 6%,rgba(255,207,229,.45),transparent 27%),radial-gradient(circle at 94% 29%,rgba(213,201,255,.27),transparent 25%),radial-gradient(circle at 42% 92%,rgba(255,227,238,.55),transparent 30%)}
+    .spark{position:absolute;width:7px;height:7px;background:#ff9bc6;border-radius:2px;opacity:0;animation:sparkDrift var(--dur,11s) linear infinite;animation-delay:var(--delay,0s);left:var(--x,50%);top:105%;box-shadow:0 0 13px rgba(255,114,173,.4)}
+    @keyframes sparkDrift{0%{transform:translate3d(0,0,0) rotate(0) scale(.6);opacity:0}12%{opacity:.65}82%{opacity:.45}100%{transform:translate3d(var(--dx,20px),-120vh,0) rotate(220deg) scale(1.2);opacity:0}}
+    .site{position:relative;z-index:1}.wrap{width:min(var(--max),calc(100% - 44px));margin:0 auto}
+    .top-note{background:var(--plum);color:#fff1f8;text-align:center;padding:9px 16px;font-size:.76rem;letter-spacing:.07em;font-weight:700}.top-note span{color:#ffb4d2}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,249,252,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(232,207,224,.65)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo{display:inline-flex;align-items:center;gap:10px;font-size:1.25rem;font-weight:1000;letter-spacing:-.06em}.logo-mark{width:35px;height:35px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(145deg,#ffa8cc,#f56ba9);color:white;box-shadow:0 8px 18px rgba(245,107,169,.28);font-size:1.1rem}.logo em{color:#d64e91;font-style:normal}.navlinks{display:flex;align-items:center;gap:25px;color:#6d596d;font-size:.88rem;font-weight:750}.navlinks a:not(.nav-cta):hover{color:#cf4f90}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:999px;padding:13px 19px;font-weight:900;font-size:.9rem;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}.nav-cta,.btn-primary{background:var(--plum);color:white;box-shadow:0 12px 28px rgba(73,37,62,.16)}.nav-cta:hover,.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 30px rgba(73,37,62,.22)}.btn-light{background:white;border:1px solid var(--line);color:var(--plum)}.btn-light:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(80,35,65,.08)}.menu-toggle{display:none;border:1px solid var(--line);background:#fff;border-radius:14px;padding:9px 12px;color:var(--plum)}
+    .hero{padding:74px 0 88px;min-height:650px;display:flex;align-items:center}.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:56px}.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid #f1d5e5;background:rgba(255,255,255,.75);color:#b7477c;padding:9px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.13em;font-size:.67rem;font-weight:1000}.eyebrow i{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 5px #ffe4f0}.hero h1{font-size:clamp(3.35rem,6.5vw,6.25rem);line-height:.94;letter-spacing:-.075em;margin:23px 0 19px;max-width:720px}.hero h1 .accent{color:#d85094;display:inline-block;position:relative}.hero h1 .accent:after{content:"";position:absolute;left:2%;right:2%;bottom:-2px;height:9px;background:#ffcee3;border-radius:50%;z-index:-1;transform:rotate(-2deg)}.hero-copy{color:var(--muted);font-size:1.08rem;line-height:1.8;max-width:570px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.trust-line{display:flex;align-items:center;gap:11px;margin-top:27px;color:#86758a;font-size:.8rem;font-weight:700}.avatar-dots{display:flex;padding-left:4px}.avatar-dots span{width:25px;height:25px;margin-left:-4px;border:2px solid var(--bg);border-radius:50%;background:linear-gradient(135deg,#ffd6e8,#c7b3ff);display:block}.avatar-dots span:nth-child(2){background:linear-gradient(135deg,#f9a8c9,#ffe7ad)}.avatar-dots span:nth-child(3){background:linear-gradient(135deg,#d8caff,#ffaed0)}
+    .hero-art{position:relative;min-height:500px;display:grid;place-items:center}.halo{position:absolute;width:min(430px,90%);aspect-ratio:1;border-radius:50%;background:linear-gradient(140deg,#ffe4f0,#f7e6ff);box-shadow:inset 0 0 0 1px rgba(255,255,255,.9);animation:haloPulse 6s ease-in-out infinite}.halo:before,.halo:after{content:"";position:absolute;border:1px solid rgba(212,135,177,.33);border-radius:50%;inset:-25px;transform:rotate(-18deg)}.halo:after{inset:-47px;transform:rotate(25deg);border-style:dashed;opacity:.6}@keyframes haloPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}.hero-photo{position:relative;z-index:2;width:min(300px,64%);height:390px;object-fit:cover;object-position:center 28%;border-radius:180px 180px 30px 30px;border:8px solid rgba(255,255,255,.93);box-shadow:0 32px 65px rgba(101,43,81,.19);transform:rotate(-3deg);animation:photoFloat 6s ease-in-out infinite}@keyframes photoFloat{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-10px) rotate(1deg)}}.preview-note{position:absolute;z-index:3;background:rgba(255,255,255,.9);backdrop-filter:blur(15px);border:1px solid white;border-radius:22px;box-shadow:0 18px 42px rgba(91,39,74,.14);padding:16px 19px}.preview-note small{display:block;font-size:.65rem;letter-spacing:.12em;color:#bc5c8b;font-weight:1000;text-transform:uppercase}.preview-note strong{display:block;color:var(--plum);font-size:1.03rem;margin-top:5px}.note-top{right:0;top:45px;transform:rotate(5deg)}.note-bottom{left:-5px;bottom:44px;transform:rotate(-5deg);display:flex;gap:11px;align-items:center}.note-icon{width:39px;height:39px;display:grid;place-items:center;border-radius:14px;background:#fff0f6;font-size:1.25rem}.tiny-spark{position:absolute;z-index:3;color:#e45b9d;font-size:1.6rem;animation:twinkle 2.8s ease-in-out infinite}.t1{left:8%;top:16%}.t2{right:11%;bottom:19%;animation-delay:.9s}.t3{left:21%;bottom:9%;font-size:1rem;animation-delay:1.5s}@keyframes twinkle{0%,100%{transform:scale(.8) rotate(0);opacity:.55}50%{transform:scale(1.2) rotate(14deg);opacity:1}}
+    .micro-band{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.micro-items{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:22px 0}.micro-item{display:flex;align-items:center;justify-content:center;gap:9px;color:#6e596e;font-size:.84rem;font-weight:800}.micro-item b{color:#d65196;font-size:1.1rem}
+    section{padding:98px 0}.section-head{max-width:760px;margin-bottom:38px}.section-label{color:#c04c89;text-transform:uppercase;font-weight:1000;font-size:.7rem;letter-spacing:.17em}.section-head h2{font-size:clamp(2.5rem,5vw,4.6rem);line-height:.99;letter-spacing:-.065em;margin:13px 0 15px}.section-head p{margin:0;color:var(--muted);font-size:1rem;line-height:1.8}.center{text-align:center;margin-left:auto;margin-right:auto}.center p{margin-left:auto;margin-right:auto}
+    .theme-section{background:linear-gradient(180deg,rgba(255,239,247,.7),rgba(255,249,252,.1))}.theme-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.theme-card{appearance:none;border:1px solid #f1ddeb;background:#fff;padding:10px;border-radius:25px;text-align:left;box-shadow:0 10px 28px rgba(92,41,75,.05);transition:transform .25s ease,box-shadow .25s ease;overflow:hidden}.theme-card:hover{transform:translateY(-6px) rotate(-.35deg);box-shadow:0 22px 44px rgba(92,41,75,.13)}.theme-image-wrap{position:relative;overflow:hidden;border-radius:18px;height:300px;background:#fff0f7}.theme-image-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease}.theme-card:hover img{transform:scale(1.05)}.theme-number{position:absolute;top:12px;left:12px;border:1px solid rgba(255,255,255,.75);background:rgba(255,255,255,.83);backdrop-filter:blur(10px);border-radius:999px;padding:6px 10px;color:#7e4264;font-size:.66rem;font-weight:1000;letter-spacing:.08em}.theme-copy{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 7px 6px}.theme-copy strong{font-size:1rem;letter-spacing:-.02em}.theme-copy span{color:#bf4f8a;font-size:.78rem;font-weight:900}.theme-desc{padding:0 7px 7px;color:#8d7a8e;font-size:.82rem;line-height:1.5}.gallery-note{margin-top:19px;color:#968399;font-size:.77rem;line-height:1.6;text-align:center}
+    .how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}.step{border:1px solid var(--line);background:rgba(255,255,255,.76);border-radius:26px;padding:27px;position:relative;box-shadow:0 12px 35px rgba(89,37,72,.045)}.step-num{width:44px;height:44px;border-radius:15px;background:#ffe6f1;display:grid;place-items:center;color:#b83f7e;font-weight:1000;font-size:1.1rem}.step h3{font-size:1.2rem;margin:19px 0 8px;letter-spacing:-.03em}.step p{margin:0;color:var(--muted);font-size:.91rem;line-height:1.75}.step-tag{display:inline-block;margin-top:17px;color:#c14886;background:#fff2f8;padding:7px 9px;border-radius:8px;font-size:.7rem;font-weight:900}
+    .features-section{background:#f9f2ff}.features-layout{display:grid;grid-template-columns:.82fr 1.18fr;gap:55px;align-items:center}.features-panel{border-radius:30px;padding:33px;background:linear-gradient(145deg,#fff,#fff8fc);border:1px solid white;box-shadow:var(--shadow);position:relative;overflow:hidden}.features-panel:after{content:"LOVORA";position:absolute;right:-10px;bottom:-34px;font-size:5.4rem;letter-spacing:-.09em;font-weight:1000;color:rgba(211,96,159,.06)}.features-panel .quote-mark{font-size:3rem;color:#eb76ae;line-height:1}.features-panel p{font-size:1.45rem;line-height:1.5;font-weight:850;letter-spacing:-.04em;margin:7px 0 17px}.features-panel small{color:#927c90;font-weight:800;line-height:1.6}.feature-list{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.feature{padding:22px;border-radius:22px;background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.9)}.feature .ico{width:41px;height:41px;background:white;border:1px solid #f1e4ed;border-radius:14px;display:grid;place-items:center;font-size:1.15rem}.feature h3{margin:14px 0 7px;font-size:1rem}.feature p{margin:0;color:var(--muted);font-size:.84rem;line-height:1.7}
+    .plans{background:#fff}.plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:19px;align-items:stretch}.plan{border:1px solid #f0deea;border-radius:28px;padding:29px 25px;background:#fff;display:flex;flex-direction:column;box-shadow:0 13px 35px rgba(97,41,78,.05);position:relative}.plan.featured{background:linear-gradient(155deg,#fff4fa,#fff);border-color:#f1b6d4;box-shadow:0 23px 56px rgba(203,80,143,.13);transform:translateY(-8px)}.plan-badge{position:absolute;top:-13px;left:25px;border-radius:999px;background:#d65095;color:white;padding:7px 11px;font-size:.64rem;letter-spacing:.08em;font-weight:1000;text-transform:uppercase}.plan-eyebrow{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:#ba5288;font-weight:1000}.plan h3{font-size:1.55rem;letter-spacing:-.05em;margin:10px 0 8px}.plan-summary{font-size:.88rem;color:var(--muted);line-height:1.7;min-height:60px}.price{font-size:1.06rem;font-weight:1000;color:#ba4483;margin:20px 0 18px}.price small{display:block;margin-top:5px;font-size:.7rem;color:#988198;font-weight:700}.plan ul{padding:0;margin:0 0 26px;list-style:none;display:grid;gap:13px}.plan li{font-size:.85rem;color:#655367;display:flex;gap:9px;line-height:1.5}.plan li:before{content:"✓";display:grid;place-items:center;flex-shrink:0;width:19px;height:19px;border-radius:50%;background:#ffe8f3;color:#ba4b84;font-size:.68rem;font-weight:1000}.plan .btn{margin-top:auto;width:100%;padding:13px 14px}.plan-footnote{text-align:center;color:#938096;font-size:.79rem;line-height:1.7;margin:25px auto 0;max-width:700px}
+    .faq-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:55px}.faq-list{display:grid;gap:10px}.faq-item{background:#fff;border:1px solid var(--line);border-radius:19px;overflow:hidden}.faq-item summary{list-style:none;cursor:pointer;padding:19px 22px;display:flex;justify-content:space-between;gap:14px;align-items:center;font-size:.93rem;font-weight:900}.faq-item summary::-webkit-details-marker{display:none}.faq-item summary:after{content:"+";color:#cd5593;font-size:1.35rem;font-weight:500}.faq-item[open] summary:after{content:"−"}.faq-answer{padding:0 22px 20px;color:var(--muted);font-size:.88rem;line-height:1.75}
+    .final-cta{padding:25px 0 95px}.cta-box{position:relative;overflow:hidden;border-radius:36px;background:linear-gradient(115deg,#4b2742,#7c315d 60%,#b84982);color:white;padding:clamp(35px,6vw,72px);display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;box-shadow:0 28px 70px rgba(92,37,75,.2)}.cta-box:before{content:"✦";position:absolute;right:17%;top:-80px;font-size:18rem;line-height:1;color:rgba(255,255,255,.045);transform:rotate(15deg)}.cta-box .section-label{color:#ffb9d7}.cta-box h2{font-size:clamp(2.4rem,5vw,4.5rem);line-height:1;letter-spacing:-.06em;margin:13px 0}.cta-box p{max-width:620px;margin:0;color:#f2d8e8;line-height:1.8;font-size:.98rem}.cta-box .btn{position:relative;z-index:2;background:white;color:#602748;white-space:nowrap}.cta-box .btn:hover{transform:translateY(-3px)}
+    footer{padding:30px 0 35px;border-top:1px solid var(--line)}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.footer-copy{font-size:.78rem;color:#948195;line-height:1.7}.footer-links{display:flex;gap:17px;font-size:.82rem;font-weight:850;color:#79576f}.footer-links a:hover{color:#d24e91}
+    .lightbox{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:rgba(36,16,31,.88);backdrop-filter:blur(8px);padding:22px;opacity:0;visibility:hidden;transition:opacity .25s ease}.lightbox.open{opacity:1;visibility:visible}.lightbox figure{margin:0;max-width:min(680px,92vw);max-height:90vh;display:flex;flex-direction:column;gap:12px;align-items:center;transform:scale(.95);transition:transform .25s ease}.lightbox.open figure{transform:scale(1)}.lightbox img{max-height:78vh;max-width:100%;width:auto;border-radius:20px;border:4px solid #fff;box-shadow:0 30px 90px rgba(0,0,0,.45)}.lightbox figcaption{background:rgba(255,255,255,.12);color:white;border-radius:999px;padding:9px 14px;font-size:.84rem;font-weight:800}.lightbox-close{position:absolute;top:18px;right:18px;border:0;border-radius:50%;background:white;color:#57253f;width:43px;height:43px;font-size:1.4rem}
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}.reveal.visible{opacity:1;transform:none}
+    @media(max-width:960px){.hero-grid{gap:25px}.hero-art{min-height:435px}.hero-photo{height:335px}.note-top{right:-2px;top:35px}.theme-grid{grid-template-columns:repeat(2,1fr)}.features-layout{grid-template-columns:1fr;gap:28px}.features-panel{max-width:none}.faq-grid{grid-template-columns:1fr;gap:10px}.plans-grid{gap:13px}.plan{padding:25px 19px}.plan.featured{transform:none}}
+    @media(max-width:700px){.wrap{width:min(var(--max),calc(100% - 32px))}.top-note{font-size:.68rem}.nav{height:66px}.navlinks{display:none;position:absolute;left:16px;right:16px;top:65px;padding:17px;background:rgba(255,255,255,.97);border:1px solid var(--line);border-radius:21px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:0}.navlinks.open{display:flex}.navlinks a{padding:13px 10px}.navlinks .nav-cta{justify-content:center;margin-top:8px}.menu-toggle{display:inline-flex;align-items:center;gap:8px}.hero{padding:42px 0 65px}.hero-grid{grid-template-columns:1fr;gap:18px}.hero-copy-block{text-align:center}.hero h1{font-size:clamp(3.45rem,15vw,5.5rem);margin:20px auto 16px}.hero-copy{font-size:.98rem;margin:0 auto}.hero-actions{justify-content:center}.trust-line{justify-content:center}.hero-art{min-height:370px;margin-top:0}.halo{width:min(300px,79%)}.hero-photo{width:205px;height:290px;border-width:6px}.note-top{right:2px;top:21px;padding:12px 14px}.note-top strong{font-size:.86rem}.note-bottom{left:0;bottom:22px;padding:11px 13px}.note-bottom strong{font-size:.88rem}.note-icon{width:34px;height:34px}.micro-items{grid-template-columns:repeat(2,1fr);padding:18px 0;gap:15px 8px}.micro-item{justify-content:flex-start;padding-left:8px;font-size:.77rem}section{padding:72px 0}.section-head{margin-bottom:27px}.section-head h2{font-size:clamp(2.45rem,11vw,3.7rem)}.theme-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.theme-card{padding:7px;border-radius:19px}.theme-image-wrap{height:240px;border-radius:14px}.theme-copy{align-items:flex-start;padding:12px 5px 4px;flex-direction:column;gap:4px}.theme-copy strong{font-size:.87rem}.theme-copy span{font-size:.7rem}.theme-desc{font-size:.75rem;padding:0 5px 6px}.how-grid{grid-template-columns:1fr}.step{padding:23px}.feature-list{gap:10px}.feature{padding:16px}.feature h3{font-size:.9rem}.feature p{font-size:.79rem}.plans-grid{grid-template-columns:1fr;gap:16px}.plan{padding:26px 23px}.plan-summary{min-height:0}.plan-badge{left:23px}.cta-box{grid-template-columns:1fr;padding:32px 25px;gap:20px}.cta-box .btn{justify-self:start}.footer-row{align-items:flex-start;flex-direction:column;gap:14px}.footer-links{flex-wrap:wrap}}
+    @media(max-width:380px){.theme-grid{grid-template-columns:1fr}.theme-image-wrap{height:320px}.hero-actions .btn{width:100%}.hero-photo{width:190px;height:275px}.note-top{right:-2px}.note-bottom{left:-4px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.spark,.halo,.hero-photo,.tiny-spark{animation:none!important}.reveal{opacity:1;transform:none;transition:none}.theme-card,.btn{transition:none}}
+  </style>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true" id="ambient"></div>
+  <div class="site">
+    <div class="top-note">A little digital magic for the people you <span>love most ✦</span></div>
+    <header>
+      <nav class="nav wrap" aria-label="Main navigation">
+        <a class="logo" href="#home" aria-label="Lovora home"><span class="logo-mark">♡</span><span>lov<em>ora</em></span></a>
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navlinks">☰ <span>Menu</span></button>
+        <div class="navlinks" id="navlinks">
+          <a href="#themes">Themes</a><a href="#how">How it works</a><a href="#plans">Plans</a><a href="#faq">FAQ</a>
+          <a class="nav-cta" href="https://www.instagram.com/lovora.wish/" target="_blank" rel="noopener noreferrer">DM Lovora <span aria-hidden="true">↗</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="wrap hero-grid">
+          <div class="hero-copy-block">
+            <div class="eyebrow"><i></i> Personalised celebration websites</div>
+            <h1>A little website.<br>A <span class="accent">huge feeling.</span></h1>
+            <p class="hero-copy">Make their birthday feel like it was made just for them. Lovora turns your photos, inside jokes, sweet messages and favourite aesthetics into a personal little website they can open, explore and remember.</p>
+            <div class="hero-actions"><a class="btn btn-primary" href="https://www.instagram.com/lovora.wish/" target="_blank" rel="noopener noreferrer">Create my surprise <span aria-hidden="true">↗</span></a><a class="btn btn-light" href="#themes">Explore the themes <span aria-hidden="true">↓</span></a></div>
+            <div class="trust-line"><div class="avatar-dots" aria-hidden="true"><span></span><span></span><span></span></div><span>Made around your person, your photos and your story.</span></div>
+          </div>
+          <div class="hero-art" aria-label="A sample celebration website moodboard">
+            <div class="halo"></div>
+            <img class="hero-photo" src="theme-flower-fairy.jpg" alt="Flower-crown portrait used as a soft, dreamy theme reference" fetchpriority="high">
+            <div class="preview-note note-top"><small>A little reminder</small><strong>You are so loved ♡</strong></div>
+            <div class="preview-note note-bottom"><span class="note-icon">✦</span><span><small>Made just for you</small><strong>Your own little world</strong></span></div>
+            <span class="tiny-spark t1" aria-hidden="true">✦</span><span class="tiny-spark t2" aria-hidden="true">✧</span><span class="tiny-spark t3" aria-hidden="true">♡</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="micro-band"><div class="wrap micro-items"><div class="micro-item"><b>♡</b> Personal messages</div><div class="micro-item"><b>✦</b> Dreamy themes</div><div class="micro-item"><b>⌁</b> Interactive details</div><div class="micro-item"><b>↗</b> Shareable link</div></div></div>
+
+      <section class="theme-section" id="themes">
+        <div class="wrap">
+          <div class="section-head center reveal"><span class="section-label">Find their vibe</span><h2>Pick a mood.<br>Make it <span style="color:#d85094">personal.</span></h2><p>Think of these as starting points, not templates you have to squeeze into. Tell us the colours, memories and little details they love, and we’ll shape the page around them.</p></div>
+          <div class="theme-grid">
+            <button class="theme-card reveal" data-full="theme-midnight-chic.jpg" data-title="Midnight Chic" aria-label="View Midnight Chic theme inspiration"><div class="theme-image-wrap"><img src="theme-midnight-chic.jpg" alt="Midnight Chic theme inspiration" loading="lazy"><span class="theme-number">THEME 01</span></div><div class="theme-copy"><strong>Midnight Chic</strong><span>Bold · glossy · moody</span></div><div class="theme-desc">For dark glam, glossy details and a little main-character energy.</div></button>
+            <button class="theme-card reveal" data-full="theme-flower-fairy.jpg" data-title="Flower Fairy" aria-label="View Flower Fairy theme inspiration"><div class="theme-image-wrap"><img src="theme-flower-fairy.jpg" alt="Flower Fairy theme inspiration" loading="lazy"><span class="theme-number">THEME 02</span></div><div class="theme-copy"><strong>Flower Fairy</strong><span>Soft · floral · dreamy</span></div><div class="theme-desc">Petals, pretty pastels, little wishes and a gentle storybook feel.</div></button>
+            <button class="theme-card reveal" data-full="theme-soft-glam.jpg" data-title="Soft Glam" aria-label="View Soft Glam theme inspiration"><div class="theme-image-wrap"><img src="theme-soft-glam.jpg" alt="Soft Glam theme inspiration" loading="lazy"><span class="theme-number">THEME 03</span></div><div class="theme-copy"><strong>Soft Glam</strong><span>Elegant · light · luxe</span></div><div class="theme-desc">A clean, polished look with a few magical details and a big heart.</div></button>
+            <button class="theme-card reveal" data-full="theme-lavender-dream.jpg" data-title="Lavender Dream" aria-label="View Lavender Dream theme inspiration"><div class="theme-image-wrap"><img src="theme-lavender-dream.jpg" alt="Lavender Dream theme inspiration" loading="lazy"><span class="theme-number">THEME 04</span></div><div class="theme-copy"><strong>Lavender Dream</strong><span>Playful · lilac · sweet</span></div><div class="theme-desc">Lilac tones, cute moments, soft gradients and playful surprises.</div></button>
+            <button class="theme-card reveal" data-full="theme-golden-hour.jpg" data-title="Golden Hour" aria-label="View Golden Hour theme inspiration"><div class="theme-image-wrap"><img src="theme-golden-hour.jpg" alt="Golden Hour theme inspiration" loading="lazy"><span class="theme-number">THEME 05</span></div><div class="theme-copy"><strong>Golden Hour</strong><span>Warm · sunny · glowing</span></div><div class="theme-desc">Sunshine shades and warm, happy energy for a bright celebration.</div></button>
+            <button class="theme-card reveal" data-full="theme-cherry-pop.jpg" data-title="Cherry Pop" aria-label="View Cherry Pop theme inspiration"><div class="theme-image-wrap"><img src="theme-cherry-pop.jpg" alt="Cherry Pop theme inspiration" loading="lazy"><span class="theme-number">THEME 06</span></div><div class="theme-copy"><strong>Cherry Pop</strong><span>Vivid · cute · iconic</span></div><div class="theme-desc">Bold reds, playful styling and a surprise that stands out.</div></button>
+          </div>
+          <p class="gallery-note">Tap any moodboard to view it larger. These photos are visual inspiration; for your finished website, use photos and media you have permission to share.</p>
+        </div>
+      </section>
+
+      <section id="how">
+        <div class="wrap">
+          <div class="section-head reveal"><span class="section-label">Easy as 1, 2, 3</span><h2>From “I have an idea”<br>to “OMG, you made this?”</h2><p>You don’t need to know anything about coding. Just bring the feeling you want to give them — Lovora helps turn it into a little online surprise.</p></div>
+          <div class="how-grid">
+            <article class="step reveal"><div class="step-num">01</div><h3>Tell us about them</h3><p>Share the occasion, their name, favourite colours, photos, a message and any special ideas you want included.</p><span class="step-tag">The personal bits</span></article>
+            <article class="step reveal"><div class="step-num">02</div><h3>Choose your vibe</h3><p>Pick a mood from the inspiration gallery or describe something totally new. We’ll confirm the scope and quote with you.</p><span class="step-tag">The creative bits</span></article>
+            <article class="step reveal"><div class="step-num">03</div><h3>Share the surprise</h3><p>Your page is prepared to match the agreed plan. Share its link with your favourite person and let the happy reactions begin.</p><span class="step-tag">The “open it!” moment</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="features-section">
+        <div class="wrap features-layout">
+          <div class="features-panel reveal"><div class="quote-mark">“</div><p>It’s more than a birthday message. It’s a tiny place on the internet that says, ‘I thought of you.’</p><small>LOVORA · Little websites, big feelings</small></div>
+          <div><div class="section-head reveal"><span class="section-label">The little details matter</span><h2>Make it feel like <span style="color:#d85094">them.</span></h2><p>Every order is discussed first, so the style and features fit the person you’re celebrating.</p></div>
+            <div class="feature-list">
+              <article class="feature reveal"><span class="ico">✦</span><h3>Animations & sparkle</h3><p>Gentle motion, reveals, floating details and surprise moments where they fit the design.</p></article>
+              <article class="feature reveal"><span class="ico">▧</span><h3>Your photo memories</h3><p>Bring photos and captions into a gallery that feels personal and can be explored.</p></article>
+              <article class="feature reveal"><span class="ico">♡</span><h3>Words from you</h3><p>Birthday wishes, inside jokes, a sweet note or a message that only they will understand.</p></article>
+              <article class="feature reveal"><span class="ico">⌁</span><h3>Made for mobile</h3><p>A responsive page designed to feel good on phones, tablets and computers.</p></article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="plans" id="plans">
+        <div class="wrap">
+          <div class="section-head center reveal"><span class="section-label">Choose your kind of magic</span><h2>Three ways to make<br>their day <span style="color:#d85094">extra.</span></h2><p>Choose a starting point, then DM Lovora to personalise the features. Pricing is confirmed before work begins, based on the options you choose.</p></div>
+          <div class="plans-grid">
+            <article class="plan reveal"><span class="plan-eyebrow">01 · Simple & sweet</span><h3>The Sweet Note</h3><p class="plan-summary">A lovely, personal one-page website for a meaningful birthday surprise.</p><div class="price">Custom quote <small>Ask on Instagram</small></div><ul><li>Personal name and birthday message</li><li>Theme and colour direction</li><li>Photo gallery using your images</li><li>Responsive layout for mobile and desktop</li><li>Shareable website link</li></ul><a class="btn btn-light" href="https://www.instagram.com/lovora.wish/" target="_blank" rel="noopener noreferrer">Ask about Sweet Note ↗</a></article>
+            <article class="plan featured reveal"><span class="plan-badge">More interactive</span><span class="plan-eyebrow">02 · Animated experience</span><h3>The Sparkle Story</h3><p class="plan-summary">For people who love motion, surprises and a page that feels like a mini experience.</p><div class="price">Custom quote <small>Ask on Instagram</small></div><ul><li>Everything in The Sweet Note</li><li>More animated details and transitions</li><li>Interactive surprise elements, where suitable</li><li>Personalised sections and story moments</li><li>Photo gallery and custom message</li></ul><a class="btn btn-primary" href="https://www.instagram.com/lovora.wish/" target="_blank" rel="noopener noreferrer">Ask about Sparkle Story ↗</a></article>
+            <article class="plan reveal"><span class="plan-eyebrow">03 · Extra personal</span><h3>The Dream Link</h3><p class="plan-summary">A more tailored experience for a specific idea, theme or domain request.</p><div class="price">Custom quote <small>Depends on the brief</small></div><ul><li>Custom design direction</li><li>More bespoke page sections</li><li>Special animation or interaction requests</li><li>Custom-domain setup can be discussed</li><li>Scope and delivery details agreed upfront</li></ul><a class="btn btn-light" href="https://www.instagram.com/lovora.wish/" target="_blank" rel="noopener noreferrer">Plan my custom site ↗</a></article>
+          </div>
+          <p class="plan-footnote">No surprise charges: message us first and we’ll confirm the included features, price, delivery details and any custom-domain costs before you decide.</p>
+        </div>
+      </section>
+
+      <section id="faq">
+        <div class="wrap faq-grid">
+          <div class="section-head reveal"><span class="section-label">A few quick answers</span><h2>Curious?<br>We got you.</h2><p>Not sure what to order yet? That’s completely fine — a quick Instagram message is the best place to start.</p><a class="btn btn-primary" href="https://www.instagram.com/lovora.wish/" target="_blank" rel="noopener noreferrer" style="margin-top:22px">Ask Lovora on Instagram ↗</a></div>
+          <div class="faq-list">
+            <details class="faq-item reveal"><summary>What do I need to send you?</summary><div class="faq-answer">Start with the person’s name, occasion, preferred colours or theme, your message, and the photos you want to use. You can also share reference links or ideas, even if they’re still a little messy.</div></details>
+            <details class="faq-item reveal"><summary>How much does a website cost?</summary><div class="faq-answer">Every request can be a little different, so send us your idea on Instagram. We’ll confirm the features and quote before starting. A custom domain or other third-party costs may change the total.</div></details>
+            <details class="faq-item reveal"><summary>Can I request my own domain name?</summary><div class="faq-answer">Yes, ask about a custom domain when you message us. Availability, registration, renewal costs and setup options need to be confirmed for the domain you want.</div></details>
+            <details class="faq-item reveal"><summary>Will it work on phones and computers?</summary><div class="faq-answer">The pages are designed responsively for modern mobile and desktop browsers. If you have a special device or feature requirement, mention it in your brief.</div></details>
+            <details class="faq-item reveal"><summary>Can I use my own images and words?</summary><div class="faq-answer">Absolutely — your photos and message are what make the page personal. Please send media you own or have permission to use, and let us know which photos or words should be kept private.</div></details>
+            <details class="faq-item reveal"><summary>How do I place an order?</summary><div class="faq-answer">Open the <strong>lovora.wish</strong> Instagram profile and send a DM with your occasion, preferred theme, deadline and the main features you have in mind. We’ll take it from there.</div></details>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div class="wrap"><div class="cta-box reveal"><div><span class="section-label">Your idea starts here</span><h2>Let’s make someone<br>feel so loved.</h2><p>Tell us who it’s for, what they love and the little surprise you’re imagining. We’ll help you shape it into a page worth opening twice.</p></div><a class="btn" href="https://www.instagram.com/lovora.wish/" target="_blank" rel="noopener noreferrer">Let’s talk on Instagram <span aria-hidden="true">↗</span></a></div></div>
+      </section>
+    </main>
+
+    <footer><div class="wrap footer-row"><div><a class="logo" href="#home"><span class="logo-mark">♡</span><span>lov<em>ora</em></span></a><div class="footer-copy">Little websites, big feelings.<br>Made with care for your favourite people.</div></div><div class="footer-links"><a href="#themes">Themes</a><a href="#plans">Plans</a><a href="#faq">FAQ</a><a href="https://www.instagram.com/lovora.wish/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></div><div class="wrap footer-copy" style="margin-top:24px">© <span id="year"></span> Lovora. Custom features, pricing and domain details are confirmed by DM before an order begins.</div></footer>
+  </div>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Theme inspiration preview"><button class="lightbox-close" id="lightboxClose" aria-label="Close preview">×</button><figure><img id="lightboxImage" src="" alt=""><figcaption id="lightboxCaption"></figcaption></figure></div>
+  <script>
+    (() => {
+      const instagram = 'https://www.instagram.com/lovora.wish/';
+      document.getElementById('year').textContent = new Date().getFullYear();
+      // Decorative particles are lightweight and never block taps.
+      const ambient = document.getElementById('ambient');
+      for (let i = 0; i < 22; i++) {
+        const s = document.createElement('i'); s.className = 'spark';
+        s.style.setProperty('--x', `${Math.random() * 100}%`);
+        s.style.setProperty('--dur', `${8 + Math.random() * 11}s`);
+        s.style.setProperty('--delay', `${-Math.random() * 17}s`);
+        s.style.setProperty('--dx', `${Math.round(Math.random() * 100 - 50)}px`);
+        if (i % 3 === 0) { s.style.width = '4px'; s.style.height = '4px'; s.style.background = '#c8b4ff'; }
+        ambient.appendChild(s);
+      }
+      const menuToggle = document.getElementById('menuToggle');
+      const navlinks = document.getElementById('navlinks');
+      menuToggle.addEventListener('click', () => {
+        const open = navlinks.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(open));
+        menuToggle.innerHTML = open ? '× <span>Close</span>' : '☰ <span>Menu</span>';
+      });
+      navlinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        navlinks.classList.remove('open'); menuToggle.setAttribute('aria-expanded', 'false'); menuToggle.innerHTML = '☰ <span>Menu</span>';
+      }));
+      const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      }), {threshold: .12});
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImage = document.getElementById('lightboxImage');
+      const lightboxCaption = document.getElementById('lightboxCaption');
+      let previouslyFocused = null;
+      function closeLightbox() { lightbox.classList.remove('open'); document.body.style.overflow = ''; if (previouslyFocused) previouslyFocused.focus(); }
+      document.querySelectorAll('.theme-card').forEach(card => card.addEventListener('click', () => {
+        previouslyFocused = card; lightboxImage.src = card.dataset.full; lightboxImage.alt = card.dataset.title + ' theme inspiration'; lightboxCaption.textContent = card.dataset.title + ' · theme inspiration'; lightbox.classList.add('open'); document.body.style.overflow = 'hidden'; document.getElementById('lightboxClose').focus();
+      }));
+      document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox(); });
+      // Keep the Instagram address available centrally for future edits.
+      document.querySelectorAll('a[href*="instagram.com/lovora.wish"]').forEach(a => { a.href = instagram; });
+    })();
+  </script>
+</body>
+</html>
